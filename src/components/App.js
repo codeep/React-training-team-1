@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import logo from '../logo.png';
+import React, {Component} from 'react';
+import Navigation from './Navigation';
+
 
 export default class App extends Component {
 
@@ -9,10 +10,11 @@ export default class App extends Component {
 
     render() {
         return (
-            <div className='container'>                
-                <img className='logo' src={logo} />
-                <h1 className='title'>React Starter</h1>
+
+            <div className='container-fluid'>
+                <Navigation/>
             </div>
+
         );
     }
 }
