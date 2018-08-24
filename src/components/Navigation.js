@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import BookList from './BookList';
+
 import {
     Collapse,
     Navbar,
@@ -75,14 +75,12 @@ export default class Navigation extends Component {
                             </NavItem>
                             <form className="form-inline my-2 my-lg-0">
                                 <input className="form-control mr-sm-2" type="search" placeholder="Search"
-                                       aria-label="Search" value={this.state.search}
-                                       onChange={this.updateSearch.bind(this)}/>
-                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                    aria-label="Search" value={this.state.search}
+                                    onChange={this.updateSearch.bind(this)}/>
                             </form>
                         </Nav>
                     </Collapse>
                 </Navbar>
-                <BookList/>
             </div>
         );
     }
