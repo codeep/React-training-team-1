@@ -21,21 +21,27 @@ export default class BookItem extends Component {
 
         return (
             <div>
-                <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} >
+                <Button color="danger" onClick={this.toggle}>More...</Button>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>
-
+                        title: {this.props.buttonLabel.title}
                     </ModalHeader>
                     <ModalBody>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div className="col-sm-5 col-md-5 col-lg-5 float-left">
+                            <h3>Autor: {this.props.buttonLabel.author}</h3>
+                            <h4>Category: {this.props.buttonLabel.category}</h4>
+                            <img src={this.props.buttonLabel.imgurl}/>
+                            <p>Uploaded by: {this.props.buttonLabel.uploadedBy}</p>
+                            <p>date: {this.props.buttonLabel.date}</p>
+                        </div>
+                        <div className="col-sm-6 col-md-6 col-lg-6 float-left">
+                            <h5>Description</h5>
+                            <p>{this.props.buttonLabel.description}</p>
+                        </div>
+
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="primary" onClick={this.toggle}>Do Something</Button>
                     </ModalFooter>
                 </Modal>
             </div>

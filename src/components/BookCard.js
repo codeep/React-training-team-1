@@ -20,7 +20,7 @@ export default class BookCard extends Component{
                     <p>Category: <strong>{book.category}</strong></p>
                     <h5>Description</h5>
                     <p>{book.description}</p>
-                    <BookItem>More...</BookItem>
+                    <BookItem buttonLabel = {book}>More...</BookItem>
                 </CardBody>
             </Card>
 
