@@ -23,6 +23,7 @@ export default class BookItem extends Component {
             <div>
                 <Button color="danger" onClick={this.toggle}>More...</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                    <div className="bg"></div>
                     <ModalHeader toggle={this.toggle}>
                         title: {this.props.buttonLabel.title}
                     </ModalHeader>

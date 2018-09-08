@@ -12,7 +12,7 @@ export default class App extends Component {
     render() {
         return (
 
-            <div className='container-fluid'>
+            <div className='container-fluid main'>
                 <Navigation/>
                 <BookList/>
             </div>
