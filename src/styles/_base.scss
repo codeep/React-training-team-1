@@ -1,5 +1,5 @@
 body {
-    background-color: $charcoal;
+    // background-color: $charcoal;
     font-family: $font-family;
 }
 
@@ -20,4 +20,8 @@ body {
     font-size: 48px;
     text-transform: uppercase;
     text-shadow: 0 0 20px black;
+}
+.bookformdiv{
+    top: 0;
+    position: fixed;
 }
