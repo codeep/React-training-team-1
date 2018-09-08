@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-// import Login from './Login';
-// import Register from './Register';
-import Main from './Main';
 import { BrowserRouter } from 'react-router-dom';
+import CircularProgressbar from 'react-circular-progressbar';
+
+import Home from './HomeComponent';
 
 export default class App extends Component {
-    constructor() {
-        super();
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            percentage: 0   
+        };
         this.data = [
             {
-                id: 0,
+                id: 2,
                 title: 'Before She was Harriet',
                 author: 'Lesa Cline-Ransome',
                 imgurl: 'https://www.bookish.com/wp-content/uploads/9780823420476_d2861-1.jpg',
@@ -30,7 +32,7 @@ export default class App extends Component {
                 uploadedBy: 'Admin'
             },
             {
-                id: 2,
+                id: 0,
                 title: 'The Man in the High Castle',
                 author: 'Philip K. Dick',
                 imgurl: 'https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1488624290/pro_pbid_395450.jpg',
@@ -40,16 +42,45 @@ export default class App extends Component {
                 uploadedBy: 'Admin'
             }
         ];
-        localStorage.setItem('books', JSON.stringify(this.data));
+        if (localStorage.getItem('books') === null) {
+            localStorage.setItem('books', JSON.stringify(this.data));
+        }
 
+    }
 
+    componentDidMount(){
+        let interval = setInterval(() => {
+            this.setState({percentage : this.state.percentage+1});
+            if(this.state.percentage === 100){   
+                clearInterval(interval);
+            }
+        }, 30);
+    }
+
+    renderProgressBar() {
+        if ( this.state.percentage < 100 ) {
+            return (
+                <CircularProgressbar
+                    className='progressbar'
+                    percentage={this.state.percentage}
+                    text={`${this.state.percentage}%`}
+                    styles={{
+                        path: { stroke: `rgba(62, 152, 199, ${this.state.percentage / 100})` },
+                        text: { fill: 'rgb(255, 225, 225)', fontSize: '16px' },
+                    }}
+                />
+            );
+        }
+        return (
+            <BrowserRouter>
+                <Home />
+            </BrowserRouter>
+        );
     }
     render() {
         return (
-            <div className='container'>
-                <BrowserRouter>
-                    <Main />
-                </BrowserRouter>
+            <div>
+                {this.renderProgressBar()}
             </div>
         );
     }

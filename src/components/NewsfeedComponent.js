@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import AddNewBook from './Addnewbook';
 
-export default class Newsfeed extends Component {
+import AddNewBook from '../containers/AddnewbookContainer';
+
+export default class NewsfeedComponent extends Component {
 
     constructor() {
-        super();      
+        super();  
     }
 
     render() {
