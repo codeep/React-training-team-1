@@ -1,0 +1,166 @@
+body {
+    font-family: $font-family;
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+* { box-sizing: border-box; }
+.sentologinregister{
+    color: #c3d1d8;
+    margin: 0 80px;
+}
+.backgroundfordiv{
+    background-color: #0000007a;
+    padding: 50px;
+}
+.container {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    justify-content: center;
+}
+.loginInput{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #c3c3c3;
+    width: 325px;
+}
+.logindiv{
+    span{
+        font-size: 35px;
+        color: #c3c3c3;
+    }
+}
+.loginSubmit{
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 300px;
+    color: #ffffff;
+    border: 1px solid #57a55a;
+    border-radius: 5px;
+    background-color: #57a55a
+}
+.usercontainer{
+    width: 25%;
+    float: left;
+    padding: 10px;
+    .userprofile{
+        margin: 10px;
+        position: fixed;
+        padding: 10px;
+        .userimgdiv{
+            margin: 5px;
+            img{
+                margin: auto;
+                display: block;
+            }
+        }
+        div{
+            padding: 5px;
+            font-size: 20px; 
+            color: #c3d1d8;
+            span{
+                color: #ffffff;
+            }
+        }
+        button{
+            border: 1px solid #0090bb;
+            background-color: #0090bb;
+            color: #c3c3c3;
+            padding: 5px 10px;
+            margin: 10px 0px;
+            font-size: 70%;
+        }
+    }
+}
+.bookscontainer{
+    width: 75%;
+    display: inline-block;
+    padding: 10px;
+    .seconddivforbook{
+        background-color: #0000007a;
+        padding: 10px;
+    }
+    .bookformdiv{
+        display: block;
+        color: #c3c3c3;
+        .addnewbooktext{
+            display: inline;
+            margin: 5px;
+            padding: 10px;
+            width: 400px;
+        }
+        .img{
+            width: 810px;
+        }
+        .dropzone{
+            width: 820px;
+            border: 1px solid #c3c3c3;
+            border-style: dashed; 
+            height: 30px;
+        }
+        .divfortitle{
+            font-size: 35px;
+            color: #c3c3c3;
+        }
+        .submitformfornewbook{
+            margin: 10px;
+            padding: 10px;
+            color: #ffffff;
+            background-color: #57a55a;
+            border: 1px solid #57a55a;
+            width: 300px;
+        }
+    }
+    .bookcon{
+        
+        width: 900px;
+        border: 1px solid #c3c3c3;
+        margin: 5px;
+        padding: 30px;
+        .imgdiv{
+            width: 13%;
+            height: 160px;
+            display: inline;
+            float: left;
+        }
+        .infodiv{
+            display: inline;
+            font-size: 17px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #c3d1d8;
+            span{
+                font-size: 19px;
+                color: #c3c3c3;
+            }
+        }
+    }
+}
+.registerdiv{
+    span{
+        font-size: 35px;
+        color: #c3c3c3;
+    }
+    .errorspan{
+        color: red;
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+    }
+}
+.linkto{
+    color: white;
+}
+.progressbar{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 80px auto;
+}
+.divforfadein{
+    transition: 0.5;
+    opacity: 1;
+}
