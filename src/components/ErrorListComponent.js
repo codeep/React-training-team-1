@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class ErrorList extends Component {
     constructor(props){
@@ -10,3 +11,7 @@ export default class ErrorList extends Component {
         );
     }
 }
+
+ErrorList.propTypes = {
+    item: PropTypes.string
+};

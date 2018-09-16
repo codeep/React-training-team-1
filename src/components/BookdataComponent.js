@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class Bookdata extends Component {
-
+    
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <div className='bookContainer'>
+            <div className='bookcon'>
                 <div className='imgdiv'>
                     <img width='100px' src={this.props.data.imgurl} />
                 </div>
@@ -27,17 +28,22 @@ export default class Bookdata extends Component {
                         <span>Published : </span> {this.props.data.date}
                     </div>
                     <div className='insideinfo'>
-                        <span>Description : </span> {this.props.data.description.substr(1, 90)} ...
+                        <span>Description : </span> {this.props.data.description.substr(1, 85)} ...
                     </div>
                     <div className='insideinfo'>
-                        <span>Uploded By : </span> {this.props.data.uplodedby}
+                        <span>Uploded By : </span> {this.props.data.updatedby}
                     </div>
                     <div className='insideinfo'>
                         <span>Uploded Date : </span> {this.props.data.updatedate}
                     </div>
                 </div>
-                <Link to='/book'>Read More</Link>
+                {/* <Link className='linkto' to={`/books/${this.props.data.id}`} >Read More >>> </Link> */}
             </div>
         );
     }
 }
+
+
+Bookdata.propTypes = {
+    data: PropTypes.any
+};
