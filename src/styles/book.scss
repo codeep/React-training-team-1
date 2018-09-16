@@ -1,0 +1,39 @@
+.card{
+  flex-direction: row;
+  background-color: transparent;
+}
+
+.card-img{
+  width: 250px;
+  height: 300px;
+}
+
+.modal-dialog {
+  max-width: 90%;
+}
+
+.modal-content{
+  background-image: url("../books.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 7%;
+}
+
+.bg{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 7%;
+}
+
+.modal img{
+  width: 200px;
+  height: 200px;
+}
+
+.main{
+  background-image: url("../bookBg.jpg");
+}
